@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Gua Nih</title>
+
+    <link rel="icon" type="image/png" href="image/icon.png" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <div id="page-transition"></div>
+  <body>
+    
+    <!-- LOADER -->
+    <div id="loader">
+      <div class="loader-inner">
+        <span class="loader-text">Loading</span>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#home">Raka</a>
+        <div class="nav-actions">
+          <nav class="menu" id="menu">
+            <a href="#about">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="7" r="3"></circle>
+                <path d="M5 20v-2c0-2.2 3.1-4 7-4s7 1.8 7 4v2"></path>
+              </svg>
+              Tentang
+            </a>
+            <a href="#skills">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 3l2.2 4.6 5.1.8-3.7 3.6.9 5.1L12 15.6 7.5 17.1l.9-5.1-3.7-3.6 5.1-.8L12 3z"
+                ></path>
+              </svg>
+              Keahlian
+            </a>
+            <a href="#projects">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M3 7h6l2 2h10v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+                ></path>
+              </svg>
+              Projek
+            </a>
+            <a href="#contact">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                <path d="M3 7l9 6 9-6"></path>
+              </svg>
+              Kontak
+            </a>
+          </nav>
+          <button
+            class="menu-toggle"
+            aria-label="Buka menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            title="Buka menu"
+          >
+            <svg
+              class="icon icon-open"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18"></path>
+            </svg>
+            <svg
+              class="icon icon-close"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M6 6l12 12M18 6l-12 12"></path>
+            </svg>
+          </button>
+          <button
+            class="theme-toggle"
+            aria-label="Ubah ke tema terang"
+            title="Ubah ke tema terang"
+          >
+            <svg
+              class="icon icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"
+              ></path>
+            </svg>
+            <svg
+              class="icon icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <!-- Teks akan diisi efek ngetik lewat JS -->
+          <h1 id="hero-title"></h1>
+          <p class="lead" id="hero-subtitle"></p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7"></path>
+              </svg>
+              <span>Lihat Proyek</span>
+            </a>
+            <a class="btn" href="#contact">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                <path d="M3 7l9 6 9-6"></path>
+              </svg>
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- BACKGROUND BLOBS -->
+          <div class="blob blob-bg"></div>
+          <div class="blob blob-main"></div>
+          <div class="blob blob-accent"></div>
+
+          <!-- CODE SNIPPET -->
+          <pre class="code-glass">
+<code><span class="kw">const</span> developer = <span class="str">"Raka"</span>;
+
+<span class="fn">function</span> buildUI() {
+  <span class="kw">return</span> <span class="str">"Wong Ganteng"</span>;
+}</code>
+  </pre>
+
+          <!-- AVATAR -->
+          <div class="avatar-wrap">
+            <img src="image/avatar.gif" alt="Avatar Raka" />
+          </div>
+
+          <!-- FLOATING ICONS -->
+          <div class="float-icon html">HTML</div>
+          <div class="float-icon css">CSS</div>
+          <div class="float-icon js">JS</div>
+        </div>
+      </div>
+    </main>
+
+    <section id="about" class="section reveal">
+      <div class="container two-col">
+        <div class="about-photo">
+          <div class="profile-wrapper">
+            <img
+              class="profile"
+              src="image/profile.jpg"
+              alt="Foto profil"
+              loading="lazy"
+              onerror="if(!this.dataset.alt){this.dataset.alt='1';this.src='image/profile.png';}else{this.src='https://images.unsplash.com/photo-1604937466830-6cf9f5c9c8c6?auto=format&fit=crop&w=800&q=60';}"
+            />
+          </div>
+        </div>
+        <div>
+          <h2>Tentang Saya</h2>
+          <p>
+            Saya membangun antarmuka web yang cepat, aksesibel, dan mudah
+            dirawat. Saya suka bekerja dengan HTML, CSS, dan JavaScript modern.
+          </p>
+          <p>
+            Saya juga berpengalaman dalam kolaborasi tim, code review, dan
+            otomatisasi build.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt reveal">
+      <div class="container">
+        <h2>Keahlian</h2>
+        <ul class="tags skill-list">
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- HTML5 -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M3 2l1.8 18L12 22l7.2-2L21 2H3z"
+                  fill="#E34F26"
+                  stroke="none"
+                />
+                <path
+                  d="M12 18.6l5.2-1.4.4-7H12v8.4z"
+                  fill="#fff"
+                  opacity="0.12"
+                  stroke="none"
+                />
+              </svg>
+            </span>
+            <span class="label">HTML5</span>
+          </li>
+
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- CSS3 -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M3 2l1.8 18L12 22l7.2-2L21 2H3z"
+                  fill="#1572B6"
+                  stroke="none"
+                />
+                <path
+                  d="M12 18.6V7h4.5l-.6 6.1L12 18.6z"
+                  fill="#fff"
+                  opacity="0.12"
+                  stroke="none"
+                />
+              </svg>
+            </span>
+            <span class="label">CSS3</span>
+          </li>
+
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- JS -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="22"
+                  height="22"
+                  rx="3"
+                  fill="#F7DF1E"
+                  stroke="none"
+                />
+                <text
+                  x="12"
+                  y="16"
+                  text-anchor="middle"
+                  font-size="10"
+                  font-family="Arial"
+                  font-weight="700"
+                  fill="#000"
+                >
+                  JS
+                </text>
+              </svg>
+            </span>
+            <span class="label">JavaScript</span>
+          </li>
+
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- PHP -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="10"
+                  ry="6"
+                  fill="#777BB4"
+                  stroke="none"
+                ></ellipse>
+                <text
+                  x="12"
+                  y="14"
+                  text-anchor="middle"
+                  font-size="8.5"
+                  font-family="Arial"
+                  font-weight="700"
+                  fill="#fff"
+                >
+                  PHP
+                </text>
+              </svg>
+            </span>
+            <span class="label">PHP</span>
+          </li>
+
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- Tailwind -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M3 16s4-6 9-2 9 2 9 2"
+                  stroke="none"
+                  fill="#38B2AC"
+                ></path>
+                <path
+                  d="M3 16s4-6 9-2 9 2 9 2"
+                  fill="rgba(255,255,255,0.12)"
+                ></path>
+              </svg>
+            </span>
+            <span class="label">Tailwind</span>
+          </li>
+
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- Git -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M3 12l6-6 8 8-6 6-8-8z"
+                  fill="#F05032"
+                  stroke="none"
+                ></path>
+                <circle cx="7" cy="7" r="1.4" fill="#fff"></circle>
+                <circle cx="17.1" cy="17.1" r="1.4" fill="#fff"></circle>
+                <circle cx="12" cy="12" r="1.4" fill="#fff"></circle>
+              </svg>
+            </span>
+            <span class="label">Git</span>
+          </li>
+
+          <li class="tag">
+            <span class="icon" aria-hidden="true">
+              <!-- Bootstrap -->
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="3"
+                  fill="#7952B3"
+                  stroke="none"
+                ></rect>
+                <text
+                  x="12"
+                  y="15"
+                  text-anchor="middle"
+                  font-size="9"
+                  font-family="Arial"
+                  font-weight="700"
+                  fill="#fff"
+                >
+                  B
+                </text>
+              </svg>
+            </span>
+            <span class="label">Bootstrap</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2>Projek</h2>
+        <div class="grid cards">
+          <a
+            class="card project-link"
+            href="https://storeraka.ct.ws/?i=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buka demo Proyek Toko Penjualan"
+          >
+            <img
+              loading="lazy"
+              src="image/projek1.png"
+              alt="Screenshot Proyek Toko Penjualan"
+            />
+            <div class="card-body">
+              <h3>Toko Penjualan</h3>
+              <p>
+                Project ini merupakan aplikasi berbasis PHP Native yang
+                digunakan untuk memproses pembayaran secara digital melalui
+                Midtrans Payment Gateway. Sistem ini mendukung metode pembayaran
+                QRIS, sehingga pengguna cukup melakukan pemindaian kode QR
+                menggunakan mobile banking atau e-wallet tanpa perlu memasukkan
+                nomor rekening secara manual.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt reveal">
+      <div class="container">
+        <h2>Kontak</h2>
+        <div class="contact">
+          <a class="btn" href="mailto:aryaletaarya@email.com">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+              <path d="M3 7l9 6 9-6"></path>
+            </svg>
+            <span>Email</span>
+          </a>
+          <a
+            class="btn"
+            href="https://github.com/RakaPutraAL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M12 3a9 9 0 0 0-3 17.53c.47.09.64-.2.64-.45v-1.6c-2.62.57-3.17-1.12-3.17-1.12-.43-1.09-1.06-1.38-1.06-1.38-.87-.6.06-.59.06-.59 1 .07 1.53 1.04 1.53 1.04 .86 1.47 2.25 1.05 2.8 .8 .09-.63 .34-1.05 .62-1.29 -2.09-.24 -4.29-1.05 -4.29-4.66 0-1.03 .37-1.88 1-2.54 -.1-.25 -.44-1.28 .1-2.66 0 0 .83-.27 2.72 1.02 .79-.22 1.63-.33 2.48-.33 .84 0 1.69 .11 2.48 .33 1.89-1.3 2.72-1.02 2.72-1.02 .54 1.38 .2 2.41 .1 2.66 .63 .66 1 1.51 1 2.54 0 3.62 -2.2 4.41 -4.3 4.65 .35 .3 .66 .88 .66 1.77v2.62c0 .26 .17 .55 .65 .45A9 9 0 0 0 12 3z"
+              ></path>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-bar">
+        <p>© 2025 Rakaaaa</p>
+        <div class="socials">
+          <a
+            class="social"
+            href="https://instagram.com/raka_leta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1.5"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
